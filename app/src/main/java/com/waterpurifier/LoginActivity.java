@@ -44,7 +44,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         String psw = mEtPwd.getText().toString().trim();
         switch (v.getId()) {
             case R.id.tv_forget_psw:
-                Toast.makeText(getApplicationContext(), "mTvForgetpwd", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, ForgetPwdActivity.class));
                 break;
 
             case R.id.btn_login:
