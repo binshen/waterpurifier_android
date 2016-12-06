@@ -7,9 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
@@ -18,15 +15,16 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.waterpurifier.R;
-import com.waterpurifier.adapter.TransformerAdapter;
+import com.waterpurifier.adapter.MyGridAdapter;
 import com.waterpurifier.base.BaseFragment;
+import com.waterpurifier.widget.MyGridView;
 
 import java.util.HashMap;
 
 public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
 
     private SliderLayout mDemoSlider;
-
+    private MyGridView gridview;
     private View view;
 
     @Override
@@ -72,6 +70,9 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 //                Toast.makeText(getActivity(), ((TextView) view).getText().toString(), Toast.LENGTH_SHORT).show();
 //            }
 //        });
+
+        gridview = (MyGridView) view.findViewById(R.id.gridview);
+        gridview.setAdapter(new MyGridAdapter(getContext()));
     }
 
     @Override
