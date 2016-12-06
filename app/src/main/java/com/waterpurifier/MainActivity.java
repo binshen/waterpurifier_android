@@ -47,7 +47,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         return fragments;
     }
 
-
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
@@ -57,32 +56,38 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
     @Override
     public void onTabSelected(int position) {
-        if (fragments != null) {
-            if (position < fragments.size()) {
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                Fragment fragment = fragments.get(position);
-                if (fragment.isAdded()) {
-                    ft.replace(R.id.main_frame, fragment);
-                } else {
-                    ft.add(R.id.main_frame, fragment);
-                }
-                ft.commit();
-            }
-        }
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        Fragment fragment = fragments.get(position);
+        ft.replace(R.id.main_frame, fragment);
+        ft.commitAllowingStateLoss();
+
+//        if (fragments != null) {
+//            if (position < fragments.size()) {
+//                FragmentManager fm = getSupportFragmentManager();
+//                FragmentTransaction ft = fm.beginTransaction();
+//                Fragment fragment = fragments.get(position);
+//                if (fragment.isAdded()) {
+//                    ft.replace(R.id.main_frame, fragment);
+//                } else {
+//                    ft.add(R.id.main_frame, fragment);
+//                }
+//                ft.commitAllowingStateLoss();
+//            }
+//        }
     }
 
     @Override
     public void onTabUnselected(int position) {
-        if (fragments != null) {
-            if (position < fragments.size()) {
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                Fragment fragment = fragments.get(position);
-                ft.remove(fragment);
-                ft.commit();
-            }
-        }
+//        if (fragments != null) {
+//            if (position < fragments.size()) {
+//                FragmentManager fm = getSupportFragmentManager();
+//                FragmentTransaction ft = fm.beginTransaction();
+//                Fragment fragment = fragments.get(position);
+//                ft.remove(fragment);
+//                ft.commitAllowingStateLoss();
+//            }
+//        }
     }
 
     @Override
