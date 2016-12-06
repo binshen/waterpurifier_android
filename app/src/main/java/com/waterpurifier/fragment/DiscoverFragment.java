@@ -11,12 +11,6 @@ import com.waterpurifier.base.BaseFragment;
 
 public class DiscoverFragment extends BaseFragment {
 
-
-    public DiscoverFragment() {
-
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

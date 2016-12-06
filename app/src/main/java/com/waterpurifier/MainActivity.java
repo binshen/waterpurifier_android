@@ -25,11 +25,10 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
         bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_purify_1, "净化").setInActiveColor("#FFFF00"))
-                .addItem(new BottomNavigationItem(R.mipmap.main_discover_1, "发现").setInActiveColor("#00FFFF"))
-                .addItem(new BottomNavigationItem(R.mipmap.main_mine_1, "我的").setInActiveColor("#0000FF"))
-                .setFirstSelectedPosition(0)
-                .initialise();
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_purify_1, "净化").setInActiveColor("#FFFF00"));
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_discover_1, "发现").setInActiveColor("#00FFFF"));
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_mine_1, "我的").setInActiveColor("#0000FF"));
+        bottomNavigationBar.setFirstSelectedPosition(0).initialise();
 
         fragments = getFragments();
         setDefaultFragment();
@@ -38,9 +37,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
     private ArrayList<Fragment> getFragments() {
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(PurifyFragment.newInstance("purify"));
-        fragments.add(DiscoverFragment.newInstance("discover"));
-        fragments.add(MineFragment.newInstance("mine"));
+        fragments.add(new PurifyFragment());
+        fragments.add(new DiscoverFragment());
+        fragments.add(new MineFragment());
         return fragments;
     }
 
@@ -48,7 +47,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.layFrame, PurifyFragment.newInstance("Home"));
+        transaction.replace(R.id.main_frame, new PurifyFragment());
         transaction.commit();
     }
 
@@ -60,9 +59,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
                 FragmentTransaction ft = fm.beginTransaction();
                 Fragment fragment = fragments.get(position);
                 if (fragment.isAdded()) {
-                    ft.replace(R.id.layFrame, fragment);
+                    ft.replace(R.id.main_frame, fragment);
                 } else {
-                    ft.add(R.id.layFrame, fragment);
+                    ft.add(R.id.main_frame, fragment);
                 }
                 ft.commitAllowingStateLoss();
             }

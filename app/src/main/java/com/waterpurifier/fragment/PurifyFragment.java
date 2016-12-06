@@ -12,12 +12,6 @@ import com.waterpurifier.base.BaseFragment;
 
 public class PurifyFragment extends BaseFragment {
 
-
-    public PurifyFragment() {
-
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
