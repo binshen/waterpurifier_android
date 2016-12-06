@@ -48,14 +48,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.btn_login:
-                if(TextUtils.isEmpty(tel)) {
-                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(psw)) {
-                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+//                if(TextUtils.isEmpty(tel)) {
+//                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if(TextUtils.isEmpty(psw)) {
+//                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
                 Toast.makeText(getApplicationContext(), "mBtnLogin", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, MainActivity.class));
                 break;
