@@ -7,6 +7,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="mine fragment" />
+        android:text="3333333333" />
 
 </FrameLayout>

@@ -1,5 +1,6 @@
 package com.waterpurifier;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -24,10 +25,13 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
         setContentView(R.layout.activity_main);
 
         BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);
-        bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_purify_1, "净化").setInActiveColor("#FFFF00"));
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_discover_1, "发现").setInActiveColor("#00FFFF"));
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_mine_1, "我的").setInActiveColor("#0000FF"));
+
+        bottomNavigationBar.setMode(BottomNavigationBar.MODE_DEFAULT);
+        bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_DEFAULT);
+        //BadgeItem numberBadgeItem = new BadgeItem().setBorderWidth(2).setBackgroundColor(Color.RED).setText("3").setHideOnSelect(true);
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_purify_2, "净化").setActiveColor("blue").setInactiveIconResource(R.mipmap.main_purify_1)).setInActiveColor("blue");
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_discover_2, "发现").setActiveColor("blue").setInactiveIconResource(R.mipmap.main_discover_1)).setInActiveColor("blue");
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.mipmap.main_mine_2, "我的").setActiveColor("blue").setInactiveIconResource(R.mipmap.main_mine_1)).setInActiveColor("blue");
         bottomNavigationBar.setFirstSelectedPosition(0).initialise();
 
         fragments = getFragments();
@@ -46,9 +50,9 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.main_frame, new PurifyFragment());
-        transaction.commit();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.main_frame, new PurifyFragment());
+        ft.commit();
     }
 
     @Override
@@ -63,7 +67,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
                 } else {
                     ft.add(R.id.main_frame, fragment);
                 }
-                ft.commitAllowingStateLoss();
+                ft.commit();
             }
         }
     }
@@ -76,7 +80,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
                 FragmentTransaction ft = fm.beginTransaction();
                 Fragment fragment = fragments.get(position);
                 ft.remove(fragment);
-                ft.commitAllowingStateLoss();
+                ft.commit();
             }
         }
     }

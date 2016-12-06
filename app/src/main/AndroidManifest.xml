@@ -18,7 +18,7 @@
         </activity>
 
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity" android:windowSoftInputMode="stateHidden" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ForgetPwdActivity" />
     </application>
