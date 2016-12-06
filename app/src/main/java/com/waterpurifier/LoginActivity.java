@@ -57,6 +57,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     return;
                 }
                 Toast.makeText(getApplicationContext(), "mBtnLogin", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, MainActivity.class));
                 break;
 
             case R.id.btn_register:
