@@ -22,7 +22,7 @@
             android:layout_marginTop="20dip"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="拍照"
+            android:text="拍照上传"
             android:background="@drawable/btn_style_button"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:layout_marginTop="5dip"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="从相册选择"
+            android:text="本地上传"
             android:background="@drawable/btn_style_button" />
 
         <Button
@@ -44,7 +44,7 @@
             android:layout_marginBottom="15dip"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="取消"
+            android:text="取  消"
             android:background="@drawable/btn_style_cancel"
             android:textColor="#ffffff"
             android:textStyle="bold" />
