@@ -23,6 +23,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 
     private Button mBtnLogout;
     private ImageView mIvBtnSetting;
+    private ImageView mIvBtnRecharge;
 
     private View view;
 
@@ -51,20 +52,29 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 
         mIvBtnSetting = (ImageView) view.findViewById(R.id.iv_btn_setting);
         mIvBtnSetting.setOnClickListener(this);
+
+        mIvBtnRecharge = (ImageView) view.findViewById(R.id.iv_btn_recharge);
+        mIvBtnRecharge.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
         switch (v.getId()) {
             case R.id.iv_btn_setting:
-                FragmentManager fm = getActivity().getSupportFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.main_frame, new MineBasicFragment());
                 ft.commitAllowingStateLoss();
                 break;
 
             case R.id.btn_logout:
                 getActivity().finish();
+                break;
+
+            case R.id.iv_btn_recharge:
+                ft.replace(R.id.main_frame, new MineRechargeFragment());
+                ft.commitAllowingStateLoss();
                 break;
         }
 

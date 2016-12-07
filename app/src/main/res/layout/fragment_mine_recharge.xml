@@ -4,10 +4,19 @@
     android:layout_height="match_parent"
     tools:context="com.waterpurifier.fragment.MineRechargeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#efefef"
+        android:orientation="vertical">
+
+        <include layout="@layout/widget_head" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_top" />
+
+    </LinearLayout>
 
 </FrameLayout>
