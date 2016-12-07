@@ -16,26 +16,26 @@ public class MyGridAdapter extends BaseAdapter {
 	private Context mContext;
 
 	public String[] img_text = {
-		"转账",
-		"余额宝",
-		"手机充值",
-		"信用卡还款",
-		"淘宝电影",
-		"彩票",
-		"当面付",
-		"亲密付",
-		"机票"
+		"拉拉秀平台",
+		"拉拉秀传媒",
+		"火车票订购",
+		"快递查询",
+		"地图导航",
+		"生活工具",
+		"违章查询",
+		"在线翻译",
+		"机票订购"
 	};
 	public int[] imgs = {
-		R.mipmap.app_transfer,
-		R.mipmap.app_fund,
-		R.mipmap.app_phonecharge,
-		R.mipmap.app_creditcard,
-		R.mipmap.app_movie,
-		R.mipmap.app_lottery,
-		R.mipmap.app_facepay,
-		R.mipmap.app_close,
-		R.mipmap.app_plane
+		R.mipmap.app_icon_1,
+		R.mipmap.app_icon_2,
+		R.mipmap.app_icon_3,
+		R.mipmap.app_icon_3,
+		R.mipmap.app_icon_5,
+		R.mipmap.app_icon_6,
+		R.mipmap.app_icon_7,
+		R.mipmap.app_icon_8,
+		R.mipmap.app_icon_9
 	};
 
 	public MyGridAdapter(Context mContext) {
