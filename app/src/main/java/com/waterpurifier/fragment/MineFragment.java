@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,7 +21,8 @@ import com.waterpurifier.base.BaseFragment;
 
 public class MineFragment extends BaseFragment implements View.OnClickListener {
 
-    private TextView mTestButton;
+    private Button mBtnLogout;
+    private ImageView mIvBtnSetting;
 
     private View view;
 
@@ -44,16 +46,27 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         tv_head_title.setTextColor(Color.WHITE);
 
 
-        mTestButton = (TextView) view.findViewById(R.id.btn_test_button);
-        mTestButton.setOnClickListener(this);
+        mBtnLogout = (Button) view.findViewById(R.id.btn_logout);
+        mBtnLogout.setOnClickListener(this);
+
+        mIvBtnSetting = (ImageView) view.findViewById(R.id.iv_btn_setting);
+        mIvBtnSetting.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View view) {
-        Toast.makeText(getContext(), "11111111111111111", Toast.LENGTH_LONG).show();
-        FragmentManager fm = getActivity().getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.main_frame, new MineBasicFragment());
-        ft.commitAllowingStateLoss();
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.iv_btn_setting:
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.main_frame, new MineBasicFragment());
+                ft.commitAllowingStateLoss();
+                break;
+
+            case R.id.btn_logout:
+                getActivity().finish();
+                break;
+        }
+
     }
 }

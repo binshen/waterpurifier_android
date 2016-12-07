@@ -17,7 +17,15 @@
             android:layout_height="250.0dip"
             android:background="@mipmap/my_top">
 
-
+            <ImageView
+                android:id="@+id/iv_btn_setting"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:src="@mipmap/my_set"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
 
         </RelativeLayout>
 
@@ -213,12 +221,6 @@
                 android:layout_height="60.0dip"
                 android:text="退出账户" />
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/btn_test_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="3333333333xxxxxxxxxxxxxxx" />
 
     </LinearLayout>
 
