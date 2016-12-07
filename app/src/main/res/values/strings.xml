@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">waterpurifier_android</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Recharge Fragment</string>
+
 </resources>
