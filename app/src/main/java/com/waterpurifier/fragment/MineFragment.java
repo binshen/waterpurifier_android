@@ -41,7 +41,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         Toast.makeText(getContext(), "11111111111111111", Toast.LENGTH_LONG).show();
         FragmentManager fm = getActivity().getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.main_frame, new MineRechargeFragment());
+        ft.replace(R.id.main_frame, new MineBasicFragment());
         ft.commitAllowingStateLoss();
     }
 }
