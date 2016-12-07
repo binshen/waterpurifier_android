@@ -17,10 +17,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mTvTitle = (TextView)findViewById(R.id.tv_title);
+        mTvTitle = (TextView)findViewById(R.id.tv_head_title);
         mTvTitle.setText("注册");
 
-        mIvLeft = (ImageView)findViewById(R.id.btn_title_left);
+        mIvLeft = (ImageView)findViewById(R.id.btn_head_left);
         mIvLeft.setImageResource(R.mipmap.back);
         mIvLeft.setOnClickListener(new View.OnClickListener() {
             @Override

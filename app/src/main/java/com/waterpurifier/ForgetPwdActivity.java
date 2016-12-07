@@ -18,10 +18,10 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pwd);
 
-        mTvTitle = (TextView)findViewById(R.id.tv_title);
+        mTvTitle = (TextView)findViewById(R.id.tv_head_title);
         mTvTitle.setText("忘记密码");
 
-        mIvLeft = (ImageView)findViewById(R.id.btn_title_left);
+        mIvLeft = (ImageView)findViewById(R.id.btn_head_left);
         mIvLeft.setImageResource(R.mipmap.back);
         mIvLeft.setOnClickListener(new View.OnClickListener() {
             @Override

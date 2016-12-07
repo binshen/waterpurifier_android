@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.waterpurifier.ForgetPwdActivity">
 
-    <include layout="@layout/widget_title" />
+    <include layout="@layout/widget_head" />
 
 </LinearLayout>
