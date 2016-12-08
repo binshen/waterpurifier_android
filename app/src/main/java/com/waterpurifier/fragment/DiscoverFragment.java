@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
@@ -60,28 +61,21 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 
         for(String name : url_maps.keySet()){
             TextSliderView textSliderView = new TextSliderView(getContext());
-            textSliderView.description(name).image(url_maps.get(name));
+            //textSliderView.description(name);
+            textSliderView.image(url_maps.get(name));
             textSliderView.setScaleType(BaseSliderView.ScaleType.Fit);
-            textSliderView.bundle(new Bundle());
-            textSliderView.getBundle().putString("extra",name);
+            //textSliderView.bundle(new Bundle());
+            //textSliderView.getBundle().putString("extra",name);
             textSliderView.setOnSliderClickListener(this);
             mDemoSlider.addSlider(textSliderView);
         }
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
-        mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-        mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(4000);
+        //mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        mDemoSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
+        //mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
+        //mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+        mDemoSlider.setDuration(5000);
         mDemoSlider.addOnPageChangeListener(this);
-
-//        ListView listView = (ListView) view.findViewById(R.id.transformers);
-//        listView.setAdapter(new TransformerAdapter(getContext()));
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                mDemoSlider.setPresetTransformer(((TextView) view).getText().toString());
-//                Toast.makeText(getActivity(), ((TextView) view).getText().toString(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
         gridview = (MyGridView) view.findViewById(R.id.gridview);
         gridview.setAdapter(new MyGridAdapter(getContext()));
@@ -100,16 +94,16 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        Log.d("Slider Demo", "onPageScrolled: " + position);
+        //Log.d("Slider Demo", "onPageScrolled: " + position);
     }
 
     @Override
     public void onPageSelected(int position) {
-        Log.d("Slider Demo", "onPageSelected: " + position);
+        //Log.d("Slider Demo", "onPageSelected: " + position);
     }
 
     @Override
     public void onPageScrollStateChanged(int state) {
-        Log.d("Slider Demo", "onPageScrollStateChanged: " + state);
+        //Log.d("Slider Demo", "onPageScrollStateChanged: " + state);
     }
 }
