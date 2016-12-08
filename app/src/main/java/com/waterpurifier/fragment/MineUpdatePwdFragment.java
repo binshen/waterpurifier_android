@@ -4,9 +4,12 @@ package com.waterpurifier.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -15,6 +18,8 @@ import com.waterpurifier.R;
 import com.waterpurifier.base.BaseFragment;
 
 public class MineUpdatePwdFragment extends BaseFragment implements View.OnClickListener {
+
+    private Button mBtnUpdatePwd;
 
     private View view;
 
@@ -38,10 +43,25 @@ public class MineUpdatePwdFragment extends BaseFragment implements View.OnClickL
         TextView tv_head_title = (TextView) view.findViewById(R.id.tv_head_title);
         tv_head_title.setText("修改密码");
         tv_head_title.setTextColor(Color.WHITE);
+
+        mBtnUpdatePwd = (Button) view.findViewById(R.id.btn_update_pwd);
+        mBtnUpdatePwd.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
+        switch (v.getId()) {
+            case R.id.btn_head_left:
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.main_frame, new MineFragment());
+                ft.commitAllowingStateLoss();
+                break;
+
+            case R.id.btn_update_pwd:
+
+                break;
+        }
     }
 }
