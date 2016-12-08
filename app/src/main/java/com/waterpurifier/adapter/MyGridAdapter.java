@@ -30,7 +30,7 @@ public class MyGridAdapter extends BaseAdapter {
 		R.mipmap.app_icon_1,
 		R.mipmap.app_icon_2,
 		R.mipmap.app_icon_3,
-		R.mipmap.app_icon_3,
+		R.mipmap.app_icon_4,
 		R.mipmap.app_icon_5,
 		R.mipmap.app_icon_6,
 		R.mipmap.app_icon_7,

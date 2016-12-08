@@ -58,8 +58,8 @@
                 android:id="@+id/iv_btn_recharge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30.0dip"
-                android:src="@mipmap/back"
+                android:layout_marginRight="50.0dip"
+                android:src="@mipmap/my_recharge"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true" />
 
