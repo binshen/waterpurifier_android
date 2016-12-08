@@ -21,7 +21,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50.0dp">
+            android:layout_marginTop="40.0dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
                     android:text="充值金额: " />
 
                 <EditText
-                    android:layout_width="120.0dp"
+                    android:layout_width="150.0dp"
                     android:layout_height="50.0dp"
                     android:textSize="20.0dip"/>
 
@@ -52,7 +52,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20.0dp">
+            android:layout_marginTop="10.0dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -98,16 +98,16 @@
                 android:layout_centerInParent="true">
 
                 <Button
-                    android:layout_width="200dip"
-                    android:layout_height="60dip"
+                    android:layout_width="180.0dip"
+                    android:layout_height="50.0dip"
                     android:background="#fc1616"
                     android:textColor="#ffffff"
                     android:textSize="22dip"
                     android:text="充  值"/>
 
                 <Button
-                    android:layout_width="200dip"
-                    android:layout_height="60dip"
+                    android:layout_width="180.0dip"
+                    android:layout_height="50.0dip"
                     android:layout_marginTop="20dip"
                     android:background="#019c63"
                     android:textColor="#ffffff"
