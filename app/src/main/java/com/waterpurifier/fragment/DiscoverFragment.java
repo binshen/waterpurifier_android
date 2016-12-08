@@ -71,7 +71,7 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
         }
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         //mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-        mDemoSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
+        //mDemoSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
         //mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
         //mDemoSlider.setCustomAnimation(new DescriptionAnimation());
         mDemoSlider.setDuration(5000);
