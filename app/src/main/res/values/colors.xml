@@ -7,4 +7,6 @@
     <color name="griditems_bg">#ffe8ecef</color>
     <color name="commo_text_color">#ff333333</color>
     <color name="line">#ffd3dde6</color>
+
+    <color name="head_blue_bg">#ff406ce7</color>
 </resources>

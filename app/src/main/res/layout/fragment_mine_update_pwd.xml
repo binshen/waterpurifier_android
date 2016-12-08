@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.waterpurifier.fragment.MineUpdatePwdFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <include layout="@layout/widget_head" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="50dip">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请设置新密码（6~20位）"
+                android:textSize="20.0dip" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请设置新密码（6~20位）"
+                android:layout_marginTop="20dip"
+                android:textSize="20.0dip"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_marginTop="50dip"
+                android:background="#406ce7"
+                android:textColor="#ffffff"
+                android:textSize="22dip"
+                android:text="提 交"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
