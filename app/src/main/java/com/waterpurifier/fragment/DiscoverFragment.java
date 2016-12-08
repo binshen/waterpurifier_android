@@ -89,7 +89,7 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 
     @Override
     public void onSliderClick(BaseSliderView slider) {
-        Toast.makeText(getContext(), slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), slider.getBundle().get("extra") + "", Toast.LENGTH_SHORT).show();
     }
 
     @Override
