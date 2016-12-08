@@ -49,7 +49,6 @@
 
         </RelativeLayout>
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,44 +60,30 @@
                 android:orientation="horizontal"
                 android:layout_centerInParent="true">
 
-                <TextView
-                    android:textSize="18.0sp"
+                <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="支付宝" />
+                    android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:textSize="18.0sp"
+                        android:text="支付宝 " />
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:textSize="18.0sp"
+                        android:text="微     信 " />
+
+                </RadioGroup>
             </LinearLayout>
-
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20.0dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_centerInParent="true">
-
-                <TextView
-                    android:textSize="18.0sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="微    信" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
 
 
         <RelativeLayout
@@ -112,13 +97,22 @@
                 android:orientation="vertical"
                 android:layout_centerInParent="true">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_width="200dip"
+                    android:layout_height="60dip"
+                    android:background="#fc1616"
+                    android:textColor="#ffffff"
+                    android:textSize="22dip"
+                    android:text="充  值"/>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_width="200dip"
+                    android:layout_height="60dip"
+                    android:layout_marginTop="20dip"
+                    android:background="#019c63"
+                    android:textColor="#ffffff"
+                    android:textSize="22dip"
+                    android:text="重新输入"/>
 
             </LinearLayout>
 
