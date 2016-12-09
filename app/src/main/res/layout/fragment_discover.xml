@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="220.0dip">
 
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
@@ -25,14 +25,14 @@
                 custom:pager_animation_span="1100"
                 android:layout_height="220.0dip"/>
 
+
             <com.daimajia.slider.library.Indicators.PagerIndicator
                 android:id="@+id/custom_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 custom:selected_color="#0095BF"
-                custom:unselected_color="#55333333"
-                custom:selected_drawable="@drawable/indicator_corner_bg"
+                custom:unselected_color=""
                 custom:shape="oval"
                 custom:selected_padding_left="5dp"
                 custom:selected_padding_right="5dp"
@@ -40,11 +40,12 @@
                 custom:unselected_padding_right="5dp"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
-                custom:selected_width="6dp"
-                custom:selected_height="6dp"
-                custom:unselected_width="6dp"
-                custom:unselected_height="6dp"
-                android:layout_marginBottom="20dp" />
+                custom:selected_width="10dp"
+                custom:selected_height="10dp"
+                custom:unselected_width="10dp"
+                custom:unselected_height="10dp"
+                android:layout_marginBottom="10dp" />
+
 <!--
             <com.daimajia.slider.library.Indicators.PagerIndicator
                 android:id="@+id/custom_indicator2"
@@ -53,33 +54,34 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="20dp" />
 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_below="@id/slider">
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fillViewport="true"
-                    android:scrollbars="none" >
-
-                    <com.waterpurifier.widget.MyGridView
-                        android:id="@+id/gridview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:horizontalSpacing="0.0dip"
-                        android:listSelector="@null"
-                        android:numColumns="3"
-                        android:scrollbars="none"
-                        android:stretchMode="columnWidth"
-                        android:verticalSpacing="0.0dip" />
-                </ScrollView>
-
-            </LinearLayout>
 
         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/slider">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <com.waterpurifier.widget.MyGridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="@null"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="0.0dip" />
+            </ScrollView>
+
+        </LinearLayout>
 
     </LinearLayout>
 

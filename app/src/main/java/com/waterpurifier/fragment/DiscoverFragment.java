@@ -68,15 +68,15 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
             //textSliderView.setOnSliderClickListener(this);
             mSlider.addSlider(textSliderView);
         }
-        //mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
-        //mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        mSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        mSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
 
-        //mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
-        //mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+        //mSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
+        //mSlider.setCustomAnimation(new DescriptionAnimation());
         mSlider.setDuration(5000);
         mSlider.addOnPageChangeListener(this);
 
-        //mSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
+        mSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
 
         mGridview = (MyGridView) view.findViewById(R.id.gridview);
         mGridview.setAdapter(new MyGridAdapter(getContext()));
