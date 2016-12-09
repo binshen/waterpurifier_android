@@ -9,14 +9,19 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.waterpurifier.R;
 import com.waterpurifier.base.BaseFragment;
 
 public class MineRechargeFragment extends BaseFragment implements View.OnClickListener {
+
+    private Button mBtnRecharge;
+    private Button mBtnReinput;
 
     private View view;
 
@@ -38,6 +43,12 @@ public class MineRechargeFragment extends BaseFragment implements View.OnClickLi
         TextView tv_head_title = (TextView) view.findViewById(R.id.tv_head_title);
         tv_head_title.setText("充 值");
         tv_head_title.setTextColor(Color.WHITE);
+
+        mBtnRecharge = (Button) view.findViewById(R.id.btn_rechange);
+        mBtnRecharge.setOnClickListener(this);
+
+        mBtnReinput = (Button) view.findViewById(R.id.btn_reinput);
+        mBtnReinput.setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +59,12 @@ public class MineRechargeFragment extends BaseFragment implements View.OnClickLi
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.main_frame, new MineFragment());
                 ft.commitAllowingStateLoss();
+                break;
+            case R.id.btn_rechange:
+                Toast.makeText(getContext(), "ReCharge", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_reinput:
+                Toast.makeText(getContext(), "ReInput", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
