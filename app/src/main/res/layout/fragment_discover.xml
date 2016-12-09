@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 custom:selected_color="#0095BF"
-                custom:unselected_color=""
+                custom:unselected_color="@color/white"
                 custom:shape="oval"
                 custom:selected_padding_left="5dp"
                 custom:selected_padding_right="5dp"
