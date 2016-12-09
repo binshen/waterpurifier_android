@@ -17,4 +17,7 @@
 
     <color name="text_color">#ff626262</color>
     <color name="hint_color">#ff999999</color>
+
+    <color name="btn_blue_color">#ff749bff</color>
+    <color name="btn_blue_color2">#ff7890fc</color>
 </resources>

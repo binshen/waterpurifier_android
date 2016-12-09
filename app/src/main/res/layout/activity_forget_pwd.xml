@@ -81,7 +81,7 @@
                     android:textSize="16.0sp"
                     android:textColor="@color/white"
                     android:id="@+id/btn_getvalidate2"
-                    android:background="#7890fc"
+                    android:background="@color/btn_blue_color2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="获取验证码" />
@@ -116,7 +116,7 @@
             android:textSize="19.0sp"
             android:textColor="@color/white"
             android:id="@+id/btn_confirm"
-            android:background="#7890fc"
+            android:background="@color/btn_blue_color2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30.0dip"
