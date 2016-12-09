@@ -4,7 +4,6 @@ package com.waterpurifier.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.Indicators.PagerIndicator;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -29,8 +27,8 @@ import java.util.HashMap;
 
 public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, AdapterView.OnItemClickListener {
 
-    private SliderLayout mDemoSlider;
-    private MyGridView gridview;
+    private SliderLayout mSlider;
+    private MyGridView mGridview;
     private View view;
 
     @Override
@@ -52,7 +50,7 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
         tv_head_title.setText("发 现");
         tv_head_title.setTextColor(Color.WHITE);
 
-        mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
+        mSlider = (SliderLayout) view.findViewById(R.id.slider);
 
         HashMap<String,String> url_maps = new HashMap<String, String>();
         url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
@@ -67,25 +65,27 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
             textSliderView.setScaleType(BaseSliderView.ScaleType.Fit);
             //textSliderView.bundle(new Bundle());
             //textSliderView.getBundle().putString("extra",name);
-            textSliderView.setOnSliderClickListener(this);
-            mDemoSlider.addSlider(textSliderView);
+            //textSliderView.setOnSliderClickListener(this);
+            mSlider.addSlider(textSliderView);
         }
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        //mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         //mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
-        //mDemoSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
+
         //mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
         //mDemoSlider.setCustomAnimation(new DescriptionAnimation());
-        mDemoSlider.setDuration(5000);
-        mDemoSlider.addOnPageChangeListener(this);
+        mSlider.setDuration(5000);
+        mSlider.addOnPageChangeListener(this);
 
-        gridview = (MyGridView) view.findViewById(R.id.gridview);
-        gridview.setAdapter(new MyGridAdapter(getContext()));
-        gridview.setOnItemClickListener(this);
+        //mSlider.setCustomIndicator((PagerIndicator) view.findViewById(R.id.custom_indicator));
+
+        mGridview = (MyGridView) view.findViewById(R.id.gridview);
+        mGridview.setAdapter(new MyGridAdapter(getContext()));
+        mGridview.setOnItemClickListener(this);
     }
 
     @Override
     public void onStop() {
-        mDemoSlider.stopAutoCycle();
+        mSlider.stopAutoCycle();
         super.onStop();
     }
 
