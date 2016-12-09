@@ -1,6 +1,5 @@
 package com.waterpurifier;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +10,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.waterpurifier.base.BaseActivity;
 import com.waterpurifier.fragment.DiscoverFragment;
 import com.waterpurifier.fragment.MineFragment;
-import com.waterpurifier.fragment.PurifyFragment;
+import com.waterpurifier.fragment.DeviceFragment;
 
 import java.util.ArrayList;
 
@@ -41,7 +40,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
 
     private ArrayList<Fragment> getFragments() {
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(new PurifyFragment());
+        fragments.add(new DeviceFragment());
         fragments.add(new DiscoverFragment());
         fragments.add(new MineFragment());
         return fragments;
@@ -50,7 +49,7 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     private void setDefaultFragment() {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.main_frame, new PurifyFragment());
+        ft.replace(R.id.main_frame, new DeviceFragment());
         ft.commit();
     }
 
