@@ -2,120 +2,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
     tools:context="com.waterpurifier.fragment.MineRechargeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backgroud_color"
         android:orientation="vertical">
 
         <include layout="@layout/widget_head" />
 
-        <ImageView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/login_top" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40.0dp">
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_centerInParent="true">
-
-                <TextView
-                    android:textSize="24.0sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="充值金额: " />
-
-                <EditText
-                    android:layout_width="150.0dp"
-                    android:layout_height="50.0dp"
-                    android:textSize="20.0dip"/>
-
-                <TextView
-                    android:textSize="24.0sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="元" />
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10.0dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_centerInParent="true">
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:button="@null"
-                        android:drawableRight="@android:drawable/btn_radio"
-                        android:textSize="18.0sp"
-                        android:text="支付宝 " />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:button="@null"
-                        android:drawableRight="@android:drawable/btn_radio"
-                        android:textSize="18.0sp"
-                        android:text="微     信 " />
-
-                </RadioGroup>
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20.0dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_centerInParent="true">
+                android:paddingBottom="20.0dip">
 
-                <Button
-                    android:layout_width="180.0dip"
-                    android:layout_height="50.0dip"
-                    android:background="#fc1616"
-                    android:textColor="#ffffff"
-                    android:textSize="22dip"
-                    android:text="充  值"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220.0dip"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/login_top" />
 
-                <Button
-                    android:layout_width="180.0dip"
-                    android:layout_height="50.0dip"
-                    android:layout_marginTop="20dip"
-                    android:background="#019c63"
-                    android:textColor="#ffffff"
-                    android:textSize="22dip"
-                    android:text="重新输入"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30.0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:textSize="24.0sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="充值金额: " />
+
+                        <EditText
+                            android:layout_width="150.0dp"
+                            android:layout_height="50.0dp"
+                            android:textSize="20.0dip"/>
+
+                        <TextView
+                            android:textSize="24.0sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="元" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerInParent="true">
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:textSize="18.0sp"
+                                android:text="支付宝 " />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                android:drawableRight="@android:drawable/btn_radio"
+                                android:textSize="18.0sp"
+                                android:text="微    信 " />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_centerInParent="true">
+
+                        <Button
+                            android:layout_width="180.0dip"
+                            android:layout_height="50.0dip"
+                            android:background="@color/btn_recharge_color"
+                            android:textColor="@color/white"
+                            android:textSize="22dip"
+                            android:text="充  值"/>
+
+                        <Button
+                            android:layout_width="180.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_marginTop="20dip"
+                            android:background="@color/btn_reinput_color"
+                            android:textColor="@color/white"
+                            android:textSize="22dip"
+                            android:text="重新输入"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </ScrollView>
 
     </LinearLayout>
 

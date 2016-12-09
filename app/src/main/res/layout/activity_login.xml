@@ -35,7 +35,7 @@
                 <LinearLayout
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:background="#6592e5"
+                    android:background="@color/btn_blue_color3"
                     android:layout_width="match_parent"
                     android:layout_height="40.0dip">
 
@@ -58,7 +58,7 @@
                 <LinearLayout
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:background="#6592e5"
+                    android:background="@color/btn_blue_color3"
                     android:layout_width="match_parent"
                     android:layout_height="40.0dip"
                     android:layout_marginTop="20.0dip">
@@ -105,7 +105,7 @@
                         android:textSize="18.0sp"
                         android:textColor="@color/white"
                         android:id="@+id/btn_login"
-                        android:background="@color/btn_blue_color"
+                        android:background="#749bff"
                         android:layout_width="fill_parent"
                         android:layout_height="48.0dip"
                         android:text="登录" />

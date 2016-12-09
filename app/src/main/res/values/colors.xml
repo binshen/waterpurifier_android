@@ -21,4 +21,8 @@
 
     <color name="btn_blue_color">#ff749bff</color>
     <color name="btn_blue_color2">#ff7890fc</color>
+    <color name="btn_blue_color3">#ff6592e5</color>
+
+    <color name="btn_recharge_color">#fffc1616</color>
+    <color name="btn_reinput_color">#ff019c63</color>
 </resources>
