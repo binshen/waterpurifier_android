@@ -18,15 +18,15 @@
         <LinearLayout
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="48.0dip"
             android:layout_marginTop="10.0dip">
 
             <EditText
                 android:textSize="16.0sp"
-                android:textColor="#626262"
-                android:textColorHint="#999999"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
                 android:id="@+id/et_tel_no1"
                 android:background="@null"
                 android:layout_width="match_parent"
@@ -53,14 +53,14 @@
                 <LinearLayout
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="48.0dip">
 
                     <EditText
                         android:textSize="16.0sp"
-                        android:textColor="#666666"
-                        android:textColorHint="#999999"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="@color/hint_color"
                         android:id="@+id/et_input_validate1"
                         android:background="@null"
                         android:layout_width="match_parent"
@@ -79,9 +79,9 @@
 
                 <Button
                     android:textSize="16.0sp"
-                    android:textColor="#666666"
+                    android:textColor="@color/white"
                     android:id="@+id/btn_getvalidate1"
-                    android:background="#0f2ee9"
+                    android:background="#7890fc"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="获取验证码" />
@@ -91,15 +91,15 @@
         <LinearLayout
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="48.0dip"
             android:layout_marginTop="10.0dip">
 
             <EditText
                 android:textSize="16.0sp"
-                android:textColor="#626262"
-                android:textColorHint="#999999"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
                 android:id="@+id/et_input_pwd1"
                 android:background="@null"
                 android:layout_width="match_parent"
@@ -114,7 +114,7 @@
 
         <Button
             android:textSize="19.0sp"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:id="@id/btn_register"
             android:background="#7890fc"
             android:layout_width="match_parent"

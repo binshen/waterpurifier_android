@@ -3,6 +3,7 @@ package com.waterpurifier;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.waterpurifier.base.BaseActivity;
@@ -19,6 +20,9 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
         mTvTitle = (TextView)findViewById(R.id.tv_head_title);
         mTvTitle.setText("注册");
+
+        RelativeLayout mRlHeadLayout = (RelativeLayout) findViewById(R.id.head_layout);
+        mRlHeadLayout.setBackgroundColor(getResources().getColor(R.color.head_blue_bg2));
 
         mIvLeft = (ImageView)findViewById(R.id.btn_head_left);
         mIvLeft.setImageResource(R.mipmap.back);

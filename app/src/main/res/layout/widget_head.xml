@@ -11,7 +11,7 @@
         android:id="@+id/btn_head_left"
         android:padding="0.0dip"
         android:visibility="visible"
-        android:layout_width="wrap_content"
+        android:layout_width="60dip"
         android:layout_height="match_parent"
         android:layout_marginLeft="0.0dip"
         android:src="@mipmap/back"
@@ -20,7 +20,7 @@
 
     <TextView
         android:textSize="19.0sp"
-        android:textColor="#666666"
+        android:textColor="@color/white"
         android:id="@+id/tv_head_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
