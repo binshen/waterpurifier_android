@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff">
+        android:background="@color/white">
 
         <include layout="@layout/widget_head" />
 
@@ -36,8 +36,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dip"
                 android:layout_marginTop="50dip"
-                android:background="#406ce7"
-                android:textColor="#ffffff"
+                android:background="@color/head_blue_bg"
+                android:textColor="@color/white"
                 android:textSize="22dip"
                 android:text="提 交"/>
 
