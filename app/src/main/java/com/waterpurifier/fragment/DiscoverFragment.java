@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -26,7 +27,7 @@ import com.waterpurifier.widget.MyGridView;
 
 import java.util.HashMap;
 
-public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener{
+public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, AdapterView.OnItemClickListener {
 
     private SliderLayout mDemoSlider;
     private MyGridView gridview;
@@ -79,6 +80,7 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 
         gridview = (MyGridView) view.findViewById(R.id.gridview);
         gridview.setAdapter(new MyGridAdapter(getContext()));
+        gridview.setOnItemClickListener(this);
     }
 
     @Override
@@ -105,5 +107,30 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
     @Override
     public void onPageScrollStateChanged(int state) {
         //Log.d("Slider Demo", "onPageScrollStateChanged: " + state);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+        switch (i) {
+            case 0: //拉拉秀平台
+                break;
+            case 1: //拉拉秀传媒
+                break;
+            case 2: //火车票订购
+                break;
+            case 3: //快递查询
+                break;
+            case 4: //地图导航
+                break;
+            case 5: //生活工具
+                break;
+            case 6: //违章查询
+                break;
+            case 7: //在线翻译
+                break;
+            case 8: //机票订购
+                break;
+        }
     }
 }
