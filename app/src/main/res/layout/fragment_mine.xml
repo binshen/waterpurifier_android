@@ -12,13 +12,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/backgroud_color"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="30.0dip">
 
             <include layout="@layout/widget_head" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="250.0dip"
+                android:layout_height="220.0dip"
                 android:background="@mipmap/my_top">
 
                 <ImageView
@@ -40,8 +41,8 @@
 
                 <TextView
                     android:id="@+id/tv_balance_title"
-                    android:textSize="24.0sp"
-                    android:textColor="#ffffff"
+                    android:textSize="20.0sp"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30.0dip"
@@ -49,8 +50,8 @@
                     android:layout_centerVertical="true" />
 
                 <TextView
-                    android:textSize="20.0sp"
-                    android:textColor="#ffffff"
+                    android:textSize="18.0sp"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/tv_balance_title"
@@ -77,7 +78,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
-                android:background="#ffffff">
+                android:background="@color/white">
 
                 <TextView
                     android:textSize="16.0sp"
@@ -107,7 +108,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
-                android:background="#ffffff">
+                android:background="@color/white">
 
                 <TextView
                     android:textSize="16.0sp"
@@ -137,7 +138,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
-                android:background="#ffffff">
+                android:background="@color/white">
 
                 <TextView
                     android:textSize="16.0sp"
@@ -167,7 +168,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
-                android:background="#ffffff">
+                android:background="@color/white">
 
                 <TextView
                     android:textSize="16.0sp"
@@ -217,7 +218,7 @@
 
                 <Button
                     android:textSize="18.0sp"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/white"
                     android:id="@+id/btn_logout"
                     android:background="#ff5d2f"
                     android:layout_width="match_parent"
