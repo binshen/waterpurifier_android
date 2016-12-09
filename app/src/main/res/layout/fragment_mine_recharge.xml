@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#efefef"
+        android:background="@color/backgroud_color"
         android:orientation="vertical">
 
         <include layout="@layout/widget_head" />
@@ -16,7 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@mipmap/login_top" />
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -81,10 +80,10 @@
                         android:text="微     信 " />
 
                 </RadioGroup>
+
             </LinearLayout>
+
         </RelativeLayout>
-
-
 
         <RelativeLayout
             android:layout_width="match_parent"

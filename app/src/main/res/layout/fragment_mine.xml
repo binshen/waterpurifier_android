@@ -4,223 +4,229 @@
     android:layout_height="match_parent"
     tools:context="com.waterpurifier.fragment.MineFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#efefef"
-        android:orientation="vertical">
-
-        <include layout="@layout/widget_head" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="250.0dip"
-            android:background="@mipmap/my_top">
-
-            <ImageView
-                android:id="@+id/iv_btn_setting"
-                android:layout_width="40.0dip"
-                android:layout_height="40.0dip"
-                android:layout_marginTop="10.0dip"
-                android:layout_marginRight="10.0dip"
-                android:src="@mipmap/my_set2"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60.0dip"
-            android:background="@mipmap/my_red">
-
-            <TextView
-                android:id="@+id/tv_balance_title"
-                android:textSize="24.0sp"
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30.0dip"
-                android:text="余额: "
-                android:layout_centerVertical="true" />
-
-            <TextView
-                android:textSize="20.0sp"
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tv_balance_title"
-                android:text="2569.08元"
-                android:layout_centerVertical="true" />
-
-            <ImageView
-                android:id="@+id/iv_btn_recharge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="50.0dip"
-                android:src="@mipmap/my_recharge"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true" />
-
-        </RelativeLayout>
-
-        <View
-            android:background="#d9d9d9"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dip"
-            android:layout_marginTop="25.0dip" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60.0dip"
-            android:background="#ffffff">
-
-            <TextView
-                android:textSize="16.0sp"
-                android:textColor="#4d4d4d"
-                android:id="@+id/tv_mine_label1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15.0dip"
-                android:text="分享有礼"
-                android:layout_centerVertical="true" />
-
-            <ImageView
-                android:id="@+id/iv_mine_image1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="18.0dip"
-                android:src="@mipmap/details_small"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true" />
-        </RelativeLayout>
-
-        <View
-            android:background="#d9d9d9"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dip" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60.0dip"
-            android:background="#ffffff">
-
-            <TextView
-                android:textSize="16.0sp"
-                android:textColor="#4d4d4d"
-                android:id="@+id/tv_mine_label2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15.0dip"
-                android:text="帮助中心"
-                android:layout_centerVertical="true" />
-
-            <ImageView
-                android:id="@+id/iv_mine_image2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="18.0dip"
-                android:src="@mipmap/details_small"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true" />
-        </RelativeLayout>
-
-        <View
-            android:background="#d9d9d9"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dip" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60.0dip"
-            android:background="#ffffff">
-
-            <TextView
-                android:textSize="16.0sp"
-                android:textColor="#4d4d4d"
-                android:id="@+id/tv_mine_label3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15.0dip"
-                android:text="意见反馈"
-                android:layout_centerVertical="true" />
-
-            <ImageView
-                android:id="@+id/iv_mine_image3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="18.0dip"
-                android:src="@mipmap/details_small"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true" />
-        </RelativeLayout>
-
-        <View
-            android:background="#d9d9d9"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dip" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60.0dip"
-            android:background="#ffffff">
-
-            <TextView
-                android:textSize="16.0sp"
-                android:textColor="#4d4d4d"
-                android:id="@+id/tv_mine_label4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15.0dip"
-                android:text="检查更新"
-                android:layout_centerVertical="true" />
-
-            <ImageView
-                android:id="@+id/iv_mine_image4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="18.0dip"
-                android:src="@mipmap/details_small"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true" />
-
-            <TextView
-                android:textSize="16.0sp"
-                android:textColor="#4d4d4d"
-                android:id="@+id/tv_mine_value4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="16.0dip"
-                android:text="当前版本：1.0.128"
-                android:layout_toLeftOf="@id/iv_mine_image4"
-                android:layout_centerVertical="true" />
-        </RelativeLayout>
-
-        <View
-            android:background="#d9d9d9"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dip" />
-
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:gravity="top|center"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30.0dip"
-            android:layout_marginLeft="30.0dip"
-            android:layout_marginRight="30.0dip">
+            android:background="@color/backgroud_color"
+            android:orientation="vertical">
 
-            <Button
-                android:textSize="18.0sp"
-                android:textColor="#ffffff"
-                android:id="@+id/btn_logout"
-                android:background="#ff5d2f"
+            <include layout="@layout/widget_head" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250.0dip"
+                android:background="@mipmap/my_top">
+
+                <ImageView
+                    android:id="@+id/iv_btn_setting"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@mipmap/my_set2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
-                android:text="退出账户" />
+                android:background="@mipmap/my_red">
+
+                <TextView
+                    android:id="@+id/tv_balance_title"
+                    android:textSize="24.0sp"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30.0dip"
+                    android:text="余额: "
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:textSize="20.0sp"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_balance_title"
+                    android:text="2569.08元"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_btn_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50.0dip"
+                    android:src="@mipmap/my_recharge"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="25.0dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_mine_label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="分享有礼"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_mine_image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_mine_label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="帮助中心"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_mine_image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_mine_label3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="意见反馈"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_mine_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="#ffffff">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_mine_label4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="检查更新"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_mine_image4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_mine_value4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16.0dip"
+                    android:text="当前版本：1.0.128"
+                    android:layout_toLeftOf="@id/iv_mine_image4"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+
+            <LinearLayout
+                android:gravity="top|center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginRight="30.0dip">
+
+                <Button
+                    android:textSize="18.0sp"
+                    android:textColor="#ffffff"
+                    android:id="@+id/btn_logout"
+                    android:background="#ff5d2f"
+                    android:layout_width="match_parent"
+                    android:layout_height="60.0dip"
+                    android:text="退出账户" />
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

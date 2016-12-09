@@ -8,9 +8,10 @@
     <color name="commo_text_color">#ff333333</color>
     <color name="line">#ffd3dde6</color>
 
-
     <color name="white">#ffffffff</color>
     <color name="black">#ff000000</color>
+
+    <color name="backgroud_color">#ffefefef</color>
 
     <color name="head_blue_bg">#ff406ce7</color>
     <color name="head_blue_bg2">#ff315ce7</color>
