@@ -114,22 +114,31 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 
         switch (i) {
             case 0: //拉拉秀平台
+                Toast.makeText(getContext(), "拉拉秀平台", Toast.LENGTH_SHORT).show();
                 break;
             case 1: //拉拉秀传媒
+                Toast.makeText(getContext(), "拉拉秀传媒", Toast.LENGTH_SHORT).show();
                 break;
             case 2: //火车票订购
+                Toast.makeText(getContext(), "火车票订购", Toast.LENGTH_SHORT).show();
                 break;
             case 3: //快递查询
+                Toast.makeText(getContext(), "快递查询", Toast.LENGTH_SHORT).show();
                 break;
             case 4: //地图导航
+                Toast.makeText(getContext(), "地图导航", Toast.LENGTH_SHORT).show();
                 break;
             case 5: //生活工具
+                Toast.makeText(getContext(), "生活工具", Toast.LENGTH_SHORT).show();
                 break;
             case 6: //违章查询
+                Toast.makeText(getContext(), "违章查询", Toast.LENGTH_SHORT).show();
                 break;
             case 7: //在线翻译
+                Toast.makeText(getContext(), "在线翻译", Toast.LENGTH_SHORT).show();
                 break;
             case 8: //机票订购
+                Toast.makeText(getContext(), "机票订购", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
