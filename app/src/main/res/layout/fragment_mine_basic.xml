@@ -1,0 +1,200 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.waterpurifier.fragment.MineBasicFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroud_color">
+
+            <include layout="@layout/widget_head" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220.0dip"
+                android:background="@mipmap/my_set_backgrand">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="100.0dp"
+                    android:layout_height="100.0dp"
+                    android:src="@mipmap/login_top"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#FF000000"
+                    android:layout_centerInParent="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dp"
+                    android:layout_below="@id/profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_my_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="程立根"
+                        android:textColor="@color/white"
+                        android:textSize="24.0sp"/>
+
+                    <ImageView
+                        android:layout_width="30.0dp"
+                        android:layout_height="30.0dp"
+                        android:src="@mipmap/my_boy" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="25.0dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="姓名"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_name_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_name_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16.0dip"
+                    android:text="沈斌"
+                    android:layout_toLeftOf="@id/iv_name_image"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_balance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="余额"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_balance_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_balance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16.0dip"
+                    android:text="¥ 300.20"
+                    android:layout_toLeftOf="@id/iv_balance_image"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="20.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/rl_update_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="60.0dip"
+                android:background="@color/white">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_pwd_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="修改密码"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/iv_pwd_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18.0dip"
+                    android:src="@mipmap/details_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#4d4d4d"
+                    android:id="@+id/tv_pwd_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16.0dip"
+                    android:text=""
+                    android:layout_toLeftOf="@id/iv_pwd_image"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
