@@ -38,8 +38,7 @@
                     android:id="@+id/lv_online_devices"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scrollbars="none"
-                    android:background="#6a8bd2"/>
+                    android:scrollbars="none"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -58,8 +57,7 @@
                     android:id="@+id/lv_unbind_devices"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scrollbars="none"
-                    android:background="#6a8bd2"/>
+                    android:scrollbars="none"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -78,8 +76,7 @@
                     android:id="@+id/lv_offline_devices"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scrollbars="none"
-                    android:background="#6a8bd2"/>
+                    android:scrollbars="none"/>
 
             </LinearLayout>
 
