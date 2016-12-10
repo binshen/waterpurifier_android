@@ -7,10 +7,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.waterpurifier.R;
 import com.waterpurifier.adapter.DeviceListAdapter;
@@ -20,7 +22,7 @@ import com.waterpurifier.model.Device;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DeviceFragment extends BaseFragment {
+public class DeviceFragment extends BaseFragment implements AdapterView.OnItemClickListener {
 
     private DeviceListAdapter mDeviceListAdapter;
     private ListView mLvOnlineDevices;
@@ -66,7 +68,13 @@ public class DeviceFragment extends BaseFragment {
 
         mDeviceListAdapter = new DeviceListAdapter(getContext(), mDevices);
         mLvOnlineDevices = (ListView) view.findViewById(R.id.lv_online_devices);
+        mLvOnlineDevices.setOnItemClickListener(this);
         mLvOnlineDevices.setAdapter(mDeviceListAdapter);
-        //mDeviceListAdapter.notifyDataSetChanged();
+        mDeviceListAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Toast.makeText(getContext(), String.valueOf(position), Toast.LENGTH_SHORT).show();
     }
 }
