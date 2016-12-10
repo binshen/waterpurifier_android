@@ -53,6 +53,28 @@
                     android:layout_height="1dp"
                     android:background="@color/white"/>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="#6a8bd2"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:text="没有设备" />
+                    </RelativeLayout>
+                </LinearLayout>
+
                 <ListView
                     android:id="@+id/lv_unbind_devices"
                     android:layout_width="match_parent"
@@ -71,6 +93,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="#6a8bd2"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:text="没有设备" />
+                    </RelativeLayout>
+                </LinearLayout>
 
                 <ListView
                     android:id="@+id/lv_offline_devices"
