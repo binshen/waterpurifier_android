@@ -4,6 +4,21 @@
     android:layout_height="match_parent"
     tools:context="com.waterpurifier.fragment.DeviceMainFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#0034ac">
 
+        <include layout="@layout/widget_head" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </ScrollView>
+
+    </LinearLayout>
 
 </FrameLayout>
