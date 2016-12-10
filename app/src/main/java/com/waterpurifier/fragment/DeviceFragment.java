@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -52,16 +54,19 @@ public class DeviceFragment extends BaseFragment implements AdapterView.OnItemCl
         mDevices = new ArrayList<>();
 
         Device d1 = new Device();
+        d1.set_id("id_1");
         d1.setName("1111111a");
         d1.setStatus(1);
         mDevices.add(d1);
 
         Device d2 = new Device();
+        d2.set_id("id_2");
         d2.setName("2222222b");
         d2.setStatus(0);
         mDevices.add(d2);
 
         Device d3 = new Device();
+        d3.set_id("id_3");
         d3.setName("3333333c");
         d3.setStatus(1);
         mDevices.add(d3);
@@ -70,11 +75,33 @@ public class DeviceFragment extends BaseFragment implements AdapterView.OnItemCl
         mLvOnlineDevices = (ListView) view.findViewById(R.id.lv_online_devices);
         mLvOnlineDevices.setOnItemClickListener(this);
         mLvOnlineDevices.setAdapter(mDeviceListAdapter);
+
+        setListViewHeightBasedOnChildren(mLvOnlineDevices);
         mDeviceListAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(getContext(), String.valueOf(position), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), mDevices.get(position).get_id(), Toast.LENGTH_SHORT).show();
+    }
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) {
+            return;
+        }
+        int totalHeight = listView.getPaddingTop() + listView.getPaddingBottom();
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+            if (listItem instanceof ViewGroup) {
+                listItem.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            }
+
+            listItem.measure(0, 0);
+            totalHeight += listItem.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
     }
 }
