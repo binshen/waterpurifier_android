@@ -8,13 +8,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.waterpurifier.R;
+import com.waterpurifier.adapter.DeviceListAdapter;
 import com.waterpurifier.base.BaseFragment;
+import com.waterpurifier.model.Device;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DeviceFragment extends BaseFragment {
+
+    private DeviceListAdapter mDeviceListAdapter;
+    private ListView mLvOnlineDevices;
+    private List<Device> mDevices;
 
     private View view;
 
@@ -36,6 +46,21 @@ public class DeviceFragment extends BaseFragment {
         tv_head_title.setText("设备列表");
         tv_head_title.setTextColor(Color.WHITE);
 
+        mDevices = new ArrayList<>();
 
+        Device d1 = new Device();
+        d1.setName("1111111a");
+        d1.setStatus(1);
+        mDevices.add(d1);
+
+        Device d2 = new Device();
+        d2.setName("2222222b");
+        d2.setStatus(0);
+        mDevices.add(d2);
+
+        mDeviceListAdapter = new DeviceListAdapter(getContext(), mDevices);
+        mLvOnlineDevices = (ListView) view.findViewById(R.id.lv_online_devices);
+        mLvOnlineDevices.setAdapter(mDeviceListAdapter);
+        mDeviceListAdapter.notifyDataSetChanged();
     }
 }
