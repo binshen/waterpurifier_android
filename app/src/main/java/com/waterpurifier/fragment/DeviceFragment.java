@@ -59,9 +59,14 @@ public class DeviceFragment extends BaseFragment {
         d2.setStatus(0);
         mDevices.add(d2);
 
+        Device d3 = new Device();
+        d3.setName("3333333c");
+        d3.setStatus(1);
+        mDevices.add(d3);
+
         mDeviceListAdapter = new DeviceListAdapter(getContext(), mDevices);
         mLvOnlineDevices = (ListView) view.findViewById(R.id.lv_online_devices);
         mLvOnlineDevices.setAdapter(mDeviceListAdapter);
-        mDeviceListAdapter.notifyDataSetChanged();
+        //mDeviceListAdapter.notifyDataSetChanged();
     }
 }
