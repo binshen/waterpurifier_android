@@ -34,6 +34,7 @@ public class DeviceFragment extends BaseFragment {
         view = inflater.inflate(R.layout.fragment_device, container, false);
         return view;
     }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
