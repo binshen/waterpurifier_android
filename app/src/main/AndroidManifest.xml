@@ -25,7 +25,7 @@
         <activity android:name=".RegisterActivity" android:screenOrientation="portrait" />
         <activity android:name=".ForgetPwdActivity" android:screenOrientation="portrait" />
 
-        <activity android:name=".SelectPicPopupWindow" android:theme="@style/MyDialogStyleBottom" android:screenOrientation="portrait" />
+        <activity android:name=".SelectPicPopupWindow" android:screenOrientation="portrait" android:theme="@style/MyDialogStyleBottom" />
     </application>
 
 </manifest>

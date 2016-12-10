@@ -25,6 +25,11 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     private ImageView mIvBtnSetting;
     private ImageView mIvBtnRecharge;
 
+    private RelativeLayout mRlMySetRow1;
+    private RelativeLayout mRlMySetRow2;
+    private RelativeLayout mRlMySetRow3;
+    private RelativeLayout mRlMySetRow4;
+
     private View view;
 
     @Override
@@ -55,6 +60,18 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 
         mIvBtnRecharge = (ImageView) view.findViewById(R.id.iv_btn_recharge);
         mIvBtnRecharge.setOnClickListener(this);
+
+        mRlMySetRow1 = (RelativeLayout) view.findViewById(R.id.rl_my_set_row_1);
+        mRlMySetRow1.setOnClickListener(this);
+
+        mRlMySetRow2 = (RelativeLayout) view.findViewById(R.id.rl_my_set_row_2);
+        mRlMySetRow2.setOnClickListener(this);
+
+        mRlMySetRow3 = (RelativeLayout) view.findViewById(R.id.rl_my_set_row_3);
+        mRlMySetRow3.setOnClickListener(this);
+
+        mRlMySetRow4 = (RelativeLayout) view.findViewById(R.id.rl_my_set_row_4);
+        mRlMySetRow4.setOnClickListener(this);
     }
 
     @Override
@@ -76,7 +93,22 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 ft.replace(R.id.main_frame, new MineRechargeFragment());
                 ft.commitAllowingStateLoss();
                 break;
-        }
 
+            case R.id.rl_my_set_row_1:
+                Toast.makeText(getContext(), "分享有礼", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.rl_my_set_row_2:
+                Toast.makeText(getContext(), "帮助中心", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.rl_my_set_row_3:
+                Toast.makeText(getContext(), "意见反馈", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.rl_my_set_row_4:
+                Toast.makeText(getContext(), "检查更新", Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }

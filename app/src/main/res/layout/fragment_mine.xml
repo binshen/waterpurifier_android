@@ -126,6 +126,7 @@
                 android:layout_marginTop="25.0dip" />
 
             <RelativeLayout
+                android:id="@+id/rl_my_set_row_1"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
                 android:background="@color/white">
@@ -156,6 +157,7 @@
                 android:layout_height="0.5dip" />
 
             <RelativeLayout
+                android:id="@+id/rl_my_set_row_2"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
                 android:background="@color/white">
@@ -186,6 +188,7 @@
                 android:layout_height="0.5dip" />
 
             <RelativeLayout
+                android:id="@+id/rl_my_set_row_3"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
                 android:background="@color/white">
@@ -216,6 +219,7 @@
                 android:layout_height="0.5dip" />
 
             <RelativeLayout
+                android:id="@+id/rl_my_set_row_4"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dip"
                 android:background="@color/white">
