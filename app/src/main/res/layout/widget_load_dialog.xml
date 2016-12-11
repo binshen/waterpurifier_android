@@ -15,8 +15,8 @@
         <ImageView
             android:id="@+id/iv_progress"
             android:background="@null"
-            android:layout_width="30.0dip"
-            android:layout_height="30.0dip"
+            android:layout_width="30.0dp"
+            android:layout_height="30.0dp"
             android:src="@mipmap/netload_01" />
     </LinearLayout>
 

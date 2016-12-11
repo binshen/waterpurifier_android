@@ -4,16 +4,16 @@
     android:id="@+id/head_layout"
     android:background="@mipmap/bg_top"
     android:layout_width="match_parent"
-    android:layout_height="50.0dip"
+    android:layout_height="50.0dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView
         android:id="@+id/btn_head_left"
-        android:padding="0.0dip"
+        android:padding="0.0dp"
         android:visibility="visible"
-        android:layout_width="60dip"
+        android:layout_width="60dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="0.0dip"
+        android:layout_marginLeft="0.0dp"
         android:src="@mipmap/back"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true" />
@@ -29,11 +29,11 @@
 
     <ImageView
         android:id="@+id/btn_head_right"
-        android:padding="0.0dip"
+        android:padding="0.0dp"
         android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_marginRight="0.0dip"
+        android:layout_marginRight="0.0dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true" />
 </RelativeLayout>

@@ -18,7 +18,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="220.0dip"
+                android:layout_height="220.0dp"
                 android:background="@mipmap/my_set_backgrand">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -60,12 +60,12 @@
             <View
                 android:background="#d9d9d9"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:layout_marginTop="25.0dip" />
+                android:layout_height="0.5dp"
+                android:layout_marginTop="25.0dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60.0dip"
+                android:layout_height="60.0dp"
                 android:background="@color/white">
 
                 <TextView
@@ -74,7 +74,7 @@
                     android:id="@+id/tv_name_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginLeft="15.0dp"
                     android:text="姓名"
                     android:layout_centerVertical="true" />
 
@@ -82,7 +82,7 @@
                     android:id="@+id/iv_name_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="18.0dip"
+                    android:layout_marginRight="18.0dp"
                     android:src="@mipmap/details_small"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true" />
@@ -93,7 +93,7 @@
                     android:id="@+id/tv_name_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="16.0dip"
+                    android:layout_marginRight="16.0dp"
                     android:text="沈斌"
                     android:layout_toLeftOf="@id/iv_name_image"
                     android:layout_centerVertical="true" />
@@ -102,11 +102,11 @@
             <View
                 android:background="#d9d9d9"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip" />
+                android:layout_height="0.5dp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60.0dip"
+                android:layout_height="60.0dp"
                 android:background="@color/white">
 
                 <TextView
@@ -115,7 +115,7 @@
                     android:id="@+id/tv_balance_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginLeft="15.0dp"
                     android:text="余额"
                     android:layout_centerVertical="true" />
 
@@ -123,7 +123,7 @@
                     android:id="@+id/iv_balance_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="18.0dip"
+                    android:layout_marginRight="18.0dp"
                     android:src="@mipmap/details_small"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true" />
@@ -134,7 +134,7 @@
                     android:id="@+id/tv_balance_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="16.0dip"
+                    android:layout_marginRight="16.0dp"
                     android:text="¥ 300.20"
                     android:layout_toLeftOf="@id/iv_balance_image"
                     android:layout_centerVertical="true" />
@@ -143,18 +143,18 @@
             <View
                 android:background="#d9d9d9"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip" />
+                android:layout_height="0.5dp" />
 
             <View
                 android:background="#d9d9d9"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip"
-                android:layout_marginTop="20.0dip" />
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20.0dp" />
 
             <RelativeLayout
                 android:id="@+id/rl_update_pwd"
                 android:layout_width="match_parent"
-                android:layout_height="60.0dip"
+                android:layout_height="60.0dp"
                 android:background="@color/white">
 
                 <TextView
@@ -163,7 +163,7 @@
                     android:id="@+id/tv_pwd_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginLeft="15.0dp"
                     android:text="修改密码"
                     android:layout_centerVertical="true" />
 
@@ -171,7 +171,7 @@
                     android:id="@+id/iv_pwd_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="18.0dip"
+                    android:layout_marginRight="18.0dp"
                     android:src="@mipmap/details_small"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true" />
@@ -182,7 +182,7 @@
                     android:id="@+id/tv_pwd_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="16.0dip"
+                    android:layout_marginRight="16.0dp"
                     android:text=""
                     android:layout_toLeftOf="@id/iv_pwd_image"
                     android:layout_centerVertical="true" />
@@ -191,7 +191,7 @@
             <View
                 android:background="#d9d9d9"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dip" />
+                android:layout_height="0.5dp" />
 
         </LinearLayout>
 

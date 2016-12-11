@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="220.0dip">
+            android:layout_height="220.0dp">
 
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
@@ -23,7 +23,7 @@
                 custom:auto_cycle="true"
                 custom:indicator_visibility="visible"
                 custom:pager_animation_span="1100"
-                android:layout_height="220.0dip"/>
+                android:layout_height="220.0dp"/>
 
 
             <com.daimajia.slider.library.Indicators.PagerIndicator
@@ -73,12 +73,12 @@
                     android:id="@+id/gridview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:horizontalSpacing="0.0dip"
+                    android:horizontalSpacing="0.0dp"
                     android:listSelector="@null"
                     android:numColumns="3"
                     android:scrollbars="none"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="0.0dip" />
+                    android:verticalSpacing="0.0dp" />
             </ScrollView>
 
         </LinearLayout>
