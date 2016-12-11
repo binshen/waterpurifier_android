@@ -3,7 +3,6 @@ package com.waterpurifier;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,15 +58,20 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.btn_login:
-                if(TextUtils.isEmpty(tel)) {
-                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(psw)) {
-                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                login(tel, psw);
+//                if(TextUtils.isEmpty(tel)) {
+//                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if(TextUtils.isEmpty(psw)) {
+//                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                login(tel, psw);
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+
                 break;
 
             case R.id.btn_register:
