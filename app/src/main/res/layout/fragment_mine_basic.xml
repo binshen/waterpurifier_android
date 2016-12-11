@@ -18,7 +18,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="220.0dp"
+                android:layout_height="@dimen/slide_album_height"
                 android:background="@mipmap/my_set_backgrand">
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -45,11 +45,11 @@
                         android:layout_height="wrap_content"
                         android:text="程立根"
                         android:textColor="@color/white"
-                        android:textSize="24.0sp"/>
+                        android:textSize="20.0sp"/>
 
                     <ImageView
-                        android:layout_width="30.0dp"
-                        android:layout_height="30.0dp"
+                        android:layout_width="25.0dp"
+                        android:layout_height="25.0dp"
                         android:src="@mipmap/my_boy" />
 
                 </LinearLayout>

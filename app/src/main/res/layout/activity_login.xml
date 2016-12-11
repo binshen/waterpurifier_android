@@ -20,7 +20,7 @@
             <ImageView
                 android:layout_gravity="top"
                 android:layout_width="match_parent"
-                android:layout_height="220.0dp"
+                android:layout_height="@dimen/slide_album_height"
                 android:scaleType="fitXY"
                 android:src="@mipmap/login_top" />
 

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class MineRechargeFragment extends BaseFragment implements View.OnClickLi
 
     private Button mBtnRecharge;
     private Button mBtnReinput;
+
+    private EditText mEtInputAmount;
 
     private View view;
 
@@ -44,6 +47,8 @@ public class MineRechargeFragment extends BaseFragment implements View.OnClickLi
         tv_head_title.setText("充 值");
         tv_head_title.setTextColor(Color.WHITE);
 
+        mEtInputAmount = (EditText) view.findViewById(R.id.et_input_amount);
+
         mBtnRecharge = (Button) view.findViewById(R.id.btn_rechange);
         mBtnRecharge.setOnClickListener(this);
 
@@ -64,7 +69,7 @@ public class MineRechargeFragment extends BaseFragment implements View.OnClickLi
                 Toast.makeText(getContext(), "ReCharge", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_reinput:
-                Toast.makeText(getContext(), "ReInput", Toast.LENGTH_SHORT).show();
+                mEtInputAmount.setText("");
                 break;
         }
     }

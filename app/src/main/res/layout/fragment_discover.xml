@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="220.0dp">
+            android:layout_height="@dimen/slide_album_height">
 
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
@@ -23,7 +23,7 @@
                 custom:auto_cycle="true"
                 custom:indicator_visibility="visible"
                 custom:pager_animation_span="1100"
-                android:layout_height="220.0dp"/>
+                android:layout_height="@dimen/slide_album_height"/>
 
 
             <com.daimajia.slider.library.Indicators.PagerIndicator
