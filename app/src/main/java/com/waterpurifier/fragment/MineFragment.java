@@ -1,10 +1,10 @@
 package com.waterpurifier.fragment;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.waterpurifier.LoginActivity;
 import com.waterpurifier.R;
 import com.waterpurifier.base.BaseFragment;
 
@@ -87,6 +88,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
 
             case R.id.btn_logout:
                 getActivity().finish();
+                startActivity(new Intent(getContext(), LoginActivity.class));
                 break;
 
             case R.id.iv_btn_recharge:

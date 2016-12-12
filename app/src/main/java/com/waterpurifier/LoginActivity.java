@@ -66,11 +66,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 //                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
 //                    return;
 //                }
-//                login(tel, psw);
+                login(tel, psw);
 
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(intent);
+//                finish();
 
                 break;
 
@@ -83,7 +83,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     public void login(final String tel, final String pwd) {
         mLoadDialog.show();
 
-        String url = basePath + "/api/login";
+        String url = basePath + "/user/login";
         RequestQueue queue = application.getRequestQueue();
 
         final Map<String, String> params = new HashMap<String, String>();
