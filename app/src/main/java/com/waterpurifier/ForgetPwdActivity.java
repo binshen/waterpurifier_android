@@ -152,8 +152,8 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
             @Override
             public void onResponse(JSONObject response) {
                 Log.d("ForgetPwdActivity", response.toString());
-                boolean success = response.optBoolean("success");
-                if (success) {
+                int code = response.optInt("code");
+                if (code > 0) {
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), response.optString("error"), Toast.LENGTH_SHORT).show();
