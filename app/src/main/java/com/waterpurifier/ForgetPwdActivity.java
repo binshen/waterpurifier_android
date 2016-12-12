@@ -59,9 +59,9 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
             }
         });
 
-        mEtTelNum = (EditText)findViewById(R.id.et_tel_num);
+        mEtTelNum = (EditText)findViewById(R.id.et_tel_num2);
         mEtInputValidate2 = (EditText)findViewById(R.id.et_input_validate2);
-        mEtPassword = (EditText)findViewById(R.id.et_input_pwd1);
+        mEtPassword = (EditText)findViewById(R.id.et_input_pwd2);
 
         mBtnConfirm = (Button)findViewById(R.id.btn_confirm);
         mBtnConfirm.setOnClickListener(this);
@@ -141,7 +141,7 @@ public class ForgetPwdActivity extends BaseActivity implements View.OnClickListe
     }
 
     private void changePassword(String tel, String password, String code) {
-        String url = basePath + "/user/change_password";
+        String url = basePath + "/user/forget_password";
         final Map<String, String> params = new HashMap<>();
         params.put("tel", tel);
         params.put("password", password);

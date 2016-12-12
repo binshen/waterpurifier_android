@@ -59,11 +59,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             }
         });
 
-        mEtTelNum = (EditText)findViewById(R.id.et_tel_num);
+        mEtTelNum = (EditText)findViewById(R.id.et_tel_num1);
         mEtInputValidate1 = (EditText)findViewById(R.id.et_input_validate1);
         mEtPassword = (EditText)findViewById(R.id.et_input_pwd1);
 
-        mBtnRegister = (Button)findViewById(R.id.btn_register2);
+        mBtnRegister = (Button)findViewById(R.id.btn_register1);
         mBtnRegister.setOnClickListener(this);
 
         mBtnGetvalidate1 = (Button)findViewById(R.id.btn_getvalidate1);
@@ -96,7 +96,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 sendMessage(tel);
                 break;
 
-            case R.id.btn_register2:
+            case R.id.btn_register1:
                 if(TextUtils.isEmpty(tel)) {
                     Toast.makeText(getApplicationContext(), "请输入手机号", Toast.LENGTH_SHORT).show();
                     return;
