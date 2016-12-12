@@ -97,6 +97,18 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 break;
 
             case R.id.btn_register2:
+                if(TextUtils.isEmpty(tel)) {
+                    Toast.makeText(getApplicationContext(), "请输入手机号", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(TextUtils.isEmpty(code)) {
+                    Toast.makeText(getApplicationContext(), "请输入验证码", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(TextUtils.isEmpty(password)) {
+                    Toast.makeText(getApplicationContext(), "请输入密码", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 registerUser(tel, password, code);
                 break;
         }
