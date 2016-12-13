@@ -32,6 +32,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     private EditText mEtTelNum;
     private EditText mEtInputValidate1;
+    private EditText mEtInputName;
     private EditText mEtPassword;
 
     private Button mBtnRegister;
@@ -61,6 +62,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
         mEtTelNum = (EditText)findViewById(R.id.et_tel_num1);
         mEtInputValidate1 = (EditText)findViewById(R.id.et_input_validate1);
+        mEtInputName = (EditText)findViewById(R.id.et_input_name);
         mEtPassword = (EditText)findViewById(R.id.et_input_pwd1);
 
         mBtnRegister = (Button)findViewById(R.id.btn_register1);
@@ -86,6 +88,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         String tel  = mEtTelNum.getText().toString().trim();
         String code = mEtInputValidate1.getText().toString().trim();
+        String name = mEtInputName.getText().toString().trim();
         String password  = mEtPassword.getText().toString().trim();
         switch (v.getId()) {
             case R.id.btn_getvalidate1:
@@ -105,11 +108,15 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     Toast.makeText(getApplicationContext(), "请输入验证码", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if(TextUtils.isEmpty(name)) {
+                    Toast.makeText(getApplicationContext(), "请输入姓名", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "请输入密码", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                registerUser(tel, password, code);
+                registerUser(tel, name, password, code);
                 break;
         }
     }
@@ -140,10 +147,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         queue.add(jsonRequest);
     }
 
-    private void registerUser(String tel, String password, String code) {
+    private void registerUser(String tel, String name, String password, String code) {
         String url = basePath + "/user/register";
         final Map<String, String> params = new HashMap<>();
         params.put("tel", tel);
+        params.put("name", name);
         params.put("password", password);
         params.put("code", code);
 

@@ -46,12 +46,12 @@
                         android:text="程立根"
                         android:textColor="@color/white"
                         android:textSize="20.0sp"/>
-
+<!--
                     <ImageView
                         android:layout_width="25.0dp"
                         android:layout_height="25.0dp"
                         android:src="@mipmap/my_boy" />
-
+-->
                 </LinearLayout>
 
             </RelativeLayout>

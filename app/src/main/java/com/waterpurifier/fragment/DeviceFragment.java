@@ -55,19 +55,19 @@ public class DeviceFragment extends BaseFragment implements AdapterView.OnItemCl
 
         Device d1 = new Device();
         d1.set_id("id_1");
-        d1.setName("1111111a");
+        d1.setName("净水器A");
         d1.setStatus(1);
         mDevices.add(d1);
 
         Device d2 = new Device();
         d2.set_id("id_2");
-        d2.setName("2222222b");
+        d2.setName("净水器B");
         d2.setStatus(0);
         mDevices.add(d2);
 
         Device d3 = new Device();
         d3.set_id("id_3");
-        d3.setName("3333333c");
+        d3.setName("净水器C");
         d3.setStatus(1);
         mDevices.add(d3);
 
