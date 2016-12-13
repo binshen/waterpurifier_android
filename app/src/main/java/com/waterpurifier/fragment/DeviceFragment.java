@@ -4,6 +4,8 @@ package com.waterpurifier.fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +16,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.waterpurifier.R;
 import com.waterpurifier.adapter.DeviceListAdapter;
@@ -82,7 +83,11 @@ public class DeviceFragment extends BaseFragment implements AdapterView.OnItemCl
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Toast.makeText(getContext(), mDevices.get(position).get_id(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), mDevices.get(position).get_id(), Toast.LENGTH_SHORT).show();
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.main_frame, new DeviceMainFragment());
+        ft.commitAllowingStateLoss();
     }
 
     public static void setListViewHeightBasedOnChildren(ListView listView) {
