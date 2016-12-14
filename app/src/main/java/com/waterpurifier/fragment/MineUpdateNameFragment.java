@@ -56,7 +56,7 @@ public class MineUpdateNameFragment extends BaseFragment implements View.OnClick
             case R.id.btn_head_left:
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.main_frame, new MineFragment());
+                ft.replace(R.id.main_frame, new MineBasicFragment());
                 ft.commitAllowingStateLoss();
                 break;
 
