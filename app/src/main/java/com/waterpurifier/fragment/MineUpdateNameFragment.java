@@ -18,16 +18,16 @@ import android.widget.Toast;
 import com.waterpurifier.R;
 import com.waterpurifier.base.BaseFragment;
 
-public class MineUpdatePwdFragment extends BaseFragment implements View.OnClickListener {
+public class MineUpdateNameFragment extends BaseFragment implements View.OnClickListener {
 
-    private Button mBtnUpdatePwd;
+    private Button mBtnUpdateName;
 
     private View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_mine_update_pwd, container, false);
+        view = inflater.inflate(R.layout.fragment_mine_update_name, container, false);
         return view;
     }
 
@@ -42,11 +42,11 @@ public class MineUpdatePwdFragment extends BaseFragment implements View.OnClickL
         ImageView btn_head_left = (ImageView) view.findViewById(R.id.btn_head_left);
         btn_head_left.setOnClickListener(this);
         TextView tv_head_title = (TextView) view.findViewById(R.id.tv_head_title);
-        tv_head_title.setText("修改密码");
+        tv_head_title.setText("修改姓名");
         tv_head_title.setTextColor(Color.WHITE);
 
-        mBtnUpdatePwd = (Button) view.findViewById(R.id.btn_update_pwd);
-        mBtnUpdatePwd.setOnClickListener(this);
+        mBtnUpdateName = (Button) view.findViewById(R.id.btn_update_name);
+        mBtnUpdateName.setOnClickListener(this);
     }
 
     @Override
@@ -60,8 +60,8 @@ public class MineUpdatePwdFragment extends BaseFragment implements View.OnClickL
                 ft.commitAllowingStateLoss();
                 break;
 
-            case R.id.btn_update_pwd:
-                Toast.makeText(getContext(), "修改密码完成", Toast.LENGTH_SHORT).show();
+            case R.id.btn_update_name:
+                Toast.makeText(getContext(), "修改姓名完成", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

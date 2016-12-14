@@ -27,6 +27,8 @@ public class MineBasicFragment extends BaseFragment implements View.OnClickListe
 
     private RelativeLayout mRlUpdatePwd;
 
+    private RelativeLayout mRlUpdateName;
+
     private View view;
 
     @Override
@@ -53,6 +55,9 @@ public class MineBasicFragment extends BaseFragment implements View.OnClickListe
 
         mRlUpdatePwd = (RelativeLayout) view.findViewById(R.id.rl_update_pwd);
         mRlUpdatePwd.setOnClickListener(this);
+
+        mRlUpdateName = (RelativeLayout) view.findViewById(R.id.rl_update_name);
+        mRlUpdateName.setOnClickListener(this);
     }
 
     @Override
@@ -73,6 +78,11 @@ public class MineBasicFragment extends BaseFragment implements View.OnClickListe
 
             case R.id.rl_update_pwd:
                 ft.replace(R.id.main_frame, new MineUpdatePwdFragment());
+                ft.commitAllowingStateLoss();
+                break;
+
+            case R.id.rl_update_name:
+                ft.replace(R.id.main_frame, new MineUpdateNameFragment());
                 ft.commitAllowingStateLoss();
                 break;
         }

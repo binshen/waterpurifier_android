@@ -64,6 +64,7 @@
                 android:layout_marginTop="25.0dp" />
 
             <RelativeLayout
+                android:id="@+id/rl_update_name"
                 android:layout_width="match_parent"
                 android:layout_height="60.0dp"
                 android:background="@color/white">
