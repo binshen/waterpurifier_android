@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/backgroud_color">
 
         <include layout="@layout/widget_head" />
 
@@ -23,14 +23,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请输入反馈信息"
-                android:lines="5"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:gravity="top"
+                android:background="@color/white"
+                android:lines="10"
                 android:textSize="20.0dp" />
 
             <Button
                 android:id="@+id/btn_add_feedback"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
                 android:background="@color/head_blue_bg"
                 android:textColor="@color/white"
                 android:textSize="22dp"
