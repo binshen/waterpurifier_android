@@ -3,10 +3,12 @@ package com.waterpurifier;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
+
+    private LinearLayout mLoginLayout;
 
     private EditText mEtTel;
     private EditText mEtPwd;
@@ -46,6 +50,22 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         mTvForgetpwd.setOnClickListener(this);
         mBtnLogin.setOnClickListener(this);
         mBtnRegister.setOnClickListener(this);
+
+        mLoginLayout = (LinearLayout)findViewById(R.id.ll_login_main_layout);
+        mLoginLayout.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(null != getWindow().getCurrentFocus()){
+                    /**
+                     * 点击空白位置 隐藏软键盘
+                     */
+                    InputMethodManager mInputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                    return mInputMethodManager.hideSoftInputFromWindow(getWindow().getCurrentFocus().getWindowToken(), 0);
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -59,19 +79,19 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.btn_login:
-                if(TextUtils.isEmpty(tel)) {
-                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(TextUtils.isEmpty(psw)) {
-                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                login(tel, psw);
+//                if(TextUtils.isEmpty(tel)) {
+//                    Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                if(TextUtils.isEmpty(psw)) {
+//                    Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//                login(tel, psw);
 
-//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(intent);
-//                finish();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
 
                 break;
 
@@ -115,4 +135,16 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         });
         queue.add(jsonRequest);
     }
+
+//    @Override
+//    public boolean onTouchEvent(MotionEvent event) {
+//        if(null != this.getCurrentFocus()){
+//            /**
+//             * 点击空白位置 隐藏软键盘
+//             */
+//            InputMethodManager mInputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+//            return mInputMethodManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+//        }
+//        return super .onTouchEvent(event);
+//    }
 }
