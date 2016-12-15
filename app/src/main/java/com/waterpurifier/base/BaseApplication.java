@@ -5,6 +5,8 @@ import android.app.Application;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONObject;
+
 /**
  * Created by bin.shen on 03/12/2016.
  */
@@ -19,4 +21,6 @@ public class BaseApplication extends Application {
         }
         return requestQueue;
     }
+
+    public JSONObject loginUser;
 }

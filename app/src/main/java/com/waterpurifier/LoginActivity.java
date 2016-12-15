@@ -119,6 +119,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                         mLoadDialog.dismiss();
                     }
                 } else {
+                    application.loginUser = response.optJSONObject("user");
+
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                     finish();

@@ -19,6 +19,7 @@
         android:padding="40dp">
 
         <EditText
+            android:id="@+id/et_input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入您的姓名"

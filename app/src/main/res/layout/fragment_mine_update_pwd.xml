@@ -19,12 +19,14 @@
             android:padding="40dp">
 
             <EditText
+                android:id="@+id/et_input_new_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请设置新密码（6~20位）"
                 android:textSize="20.0dp" />
 
             <EditText
+                android:id="@+id/et_input_new_pwd2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="请设置新密码（6~20位）"

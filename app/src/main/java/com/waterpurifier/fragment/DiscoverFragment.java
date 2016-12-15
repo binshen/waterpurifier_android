@@ -23,8 +23,6 @@ import com.waterpurifier.adapter.MyGridAdapter;
 import com.waterpurifier.base.BaseFragment;
 import com.waterpurifier.widget.MyGridView;
 
-import java.util.HashMap;
-
 public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, AdapterView.OnItemClickListener {
 
     private SliderLayout mSlider;
@@ -52,22 +50,44 @@ public class DiscoverFragment extends BaseFragment implements BaseSliderView.OnS
 
         mSlider = (SliderLayout) view.findViewById(R.id.slider);
 
-        HashMap<String,String> url_maps = new HashMap<String, String>();
-        url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
-        url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
-        url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
-        url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
+//        HashMap<String,String> url_maps = new HashMap<String, String>();
+//        url_maps.put("Hannibal", "http://static2.hypable.com/wp-content/uploads/2013/12/hannibal-season-2-release-date.jpg");
+//        url_maps.put("Big Bang Theory", "http://tvfiles.alphacoders.com/100/hdclearart-10.png");
+//        url_maps.put("House of Cards", "http://cdn3.nflximg.net/images/3093/2043093.jpg");
+//        url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
+//
+//        for(String name : url_maps.keySet()){
+//            TextSliderView textSliderView = new TextSliderView(getContext());
+//            //textSliderView.description(name);
+//            textSliderView.image(url_maps.get(name));
+//            textSliderView.setScaleType(BaseSliderView.ScaleType.Fit);
+//            //textSliderView.bundle(new Bundle());
+//            //textSliderView.getBundle().putString("extra",name);
+//            //textSliderView.setOnSliderClickListener(this);
+//            mSlider.addSlider(textSliderView);
+//        }
 
-        for(String name : url_maps.keySet()){
-            TextSliderView textSliderView = new TextSliderView(getContext());
-            //textSliderView.description(name);
-            textSliderView.image(url_maps.get(name));
-            textSliderView.setScaleType(BaseSliderView.ScaleType.Fit);
-            //textSliderView.bundle(new Bundle());
-            //textSliderView.getBundle().putString("extra",name);
-            //textSliderView.setOnSliderClickListener(this);
-            mSlider.addSlider(textSliderView);
-        }
+        TextSliderView sliderView1 = new TextSliderView(getContext());
+        sliderView1.image(R.drawable.demo);
+        sliderView1.setScaleType(BaseSliderView.ScaleType.Fit);
+        mSlider.addSlider(sliderView1);
+        TextSliderView sliderView2 = new TextSliderView(getContext());
+        sliderView2.image(R.drawable.demo1);
+        sliderView2.setScaleType(BaseSliderView.ScaleType.Fit);
+        mSlider.addSlider(sliderView2);
+        TextSliderView sliderView3 = new TextSliderView(getContext());
+        sliderView3.image(R.drawable.demo2);
+        sliderView3.setScaleType(BaseSliderView.ScaleType.Fit);
+        mSlider.addSlider(sliderView3);
+        TextSliderView sliderView4 = new TextSliderView(getContext());
+        sliderView4.image(R.drawable.demo3);
+        sliderView4.setScaleType(BaseSliderView.ScaleType.Fit);
+        mSlider.addSlider(sliderView4);
+        TextSliderView sliderView5 = new TextSliderView(getContext());
+        sliderView5.image(R.drawable.demo4);
+        sliderView5.setScaleType(BaseSliderView.ScaleType.Fit);
+        mSlider.addSlider(sliderView5);
+
         mSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
 

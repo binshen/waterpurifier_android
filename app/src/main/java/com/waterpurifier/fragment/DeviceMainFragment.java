@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,8 +19,9 @@ import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.waterpurifier.R;
 import com.waterpurifier.base.BaseFragment;
 
-public class DeviceMainFragment extends BaseFragment {
+public class DeviceMainFragment extends BaseFragment implements View.OnClickListener {
 
+    private EditText mEtInputPwd;
     private SliderLayout mGallery;
     private View view;
 
@@ -42,6 +44,8 @@ public class DeviceMainFragment extends BaseFragment {
         tv_head_title.setText("智能净水器");
         tv_head_title.setTextColor(Color.WHITE);
 
+        mEtInputPwd = (EditText) view.findViewById(R.id.et_input_pwd2);
+
         mGallery = (SliderLayout) view.findViewById(R.id.gallery);
 
         DefaultSliderView sliderView1 = new DefaultSliderView(getContext());
@@ -55,5 +59,10 @@ public class DeviceMainFragment extends BaseFragment {
         mGallery.addSlider(sliderView2);
         mGallery.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Invisible);
         mGallery.stopAutoCycle();
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
