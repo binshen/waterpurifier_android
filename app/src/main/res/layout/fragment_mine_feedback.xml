@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.waterpurifier.fragment.MineUpdatePwdFragment">
+    tools:context="com.waterpurifier.fragment.MineFeedbackFragment">
 
     <LinearLayout
         android:orientation="vertical"
@@ -19,24 +19,19 @@
             android:padding="40dp">
 
             <EditText
-                android:id="@+id/et_input_new_pwd"
+                android:id="@+id/et_input_feedback"
                 android:layout_width="match_parent"
-                android:layout_height="45.0dp"
-                android:hint="请设置新密码（6~20位）"
+                android:layout_height="wrap_content"
+                android:hint="请输入反馈信息"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_color"
+                android:gravity="top"
                 android:background="@color/white"
+                android:lines="10"
                 android:textSize="20.0dp" />
 
-            <EditText
-                android:id="@+id/et_input_new_pwd2"
-                android:layout_width="match_parent"
-                android:layout_height="45.0dp"
-                android:hint="请设置新密码（6~20位）"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:textSize="20.0dp"/>
-
             <Button
-                android:id="@+id/btn_update_pwd"
+                android:id="@+id/btn_add_feedback"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"

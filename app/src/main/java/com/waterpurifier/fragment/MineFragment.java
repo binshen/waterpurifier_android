@@ -105,7 +105,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 break;
 
             case R.id.rl_my_set_row_3:
-                Toast.makeText(getContext(), "意见反馈", Toast.LENGTH_SHORT).show();
+                ft.replace(R.id.main_frame, new MineFeedbackFragment());
+                ft.commitAllowingStateLoss();
                 break;
 
             case R.id.rl_my_set_row_4:
